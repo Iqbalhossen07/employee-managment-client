@@ -15,7 +15,7 @@ const image_hosting_api= (`https://api.imgbb.com/1/upload?key=${image_hosting_ke
 const Register = () => {
     const [users,refetch] = useEmployees()
     const filterData = users.find(employeeList=> employeeList.fire === 'fire')
-    console.log(filterData?.fire)
+    console.log(typeof(filterData.salary))
 
     const [verified,setVerified] = useState('False')
     const [fire,setFire] = useState('NotFire')

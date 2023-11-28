@@ -3,15 +3,6 @@ import { ToastContainer } from "react-toastify";
 
 const CheckOutForm = () => {
 
-    // const [data,setData] = useState(employee)
-    // console.log(data?.salary)
-
-
-  
-  
-  
-    // const totalPrice = filterData.reduce((total,item)=> total+ item.price,0)
-    // console.log(totalPrice)
     const stripe = useStripe();
     const elements = useElements();
     const handleSubmit = async(event)=>{

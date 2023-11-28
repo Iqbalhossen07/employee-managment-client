@@ -8,6 +8,8 @@ import EmployeeList from "../Pages/Dashboard/EmployeeList/EmployeeList";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import HrPrivate from "../PrivateRoute/HrPrivate";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import Cart from "../Pages/Cart/Cart";
+import Payment from "../Pages/Dashboard/EmployeeList/Payment";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
             {
                 path: "adminHome",
                 element: <AdminHome></AdminHome>
+            },
+            {
+                path: "payment",
+                element: <Payment></Payment>
+            },
+            {
+                path: "cart",
+                element: <Cart></Cart>
             }
         ]
     }

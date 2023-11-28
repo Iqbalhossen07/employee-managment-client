@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import swal from "sweetalert";
 import { useQuery } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { ImCross } from "react-icons/im";
 import { FaCheckCircle } from "react-icons/fa";
-import { Elements } from "@stripe/react-stripe-js";
-import CheckOutForm from "./CheckOutForm";
 import { loadStripe } from "@stripe/stripe-js";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import useEmployees from "../../../hooks/useEmployees";
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
 
 
 
 const EmployeeList = () => {
+  const navigate = useNavigate()
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
   const [salary,setSalary] = useState('')
@@ -62,6 +60,7 @@ const handlePayButton = async (e)=>{
   if(menuRes.data.insertedId){
     //   toast.success("Added Successfully")
     //   swal("Good job!", "Create Successfully!", "success");
+    navigate('/dashboard/payment')
       console.log(menuRes.data)
   }
 
@@ -189,13 +188,15 @@ const handlePayButton = async (e)=>{
             </div>
             
             <div className="form-control mt-6 mb-3">
-              <button 
+          
+            <button 
                 type="submit"
                 className="btn bg-[#26917C] hover:bg-[#26917C] text-white"           
                 
               >
                 Pay
               </button>
+          
             </div>
           </form>
           <div className="modal-action">
