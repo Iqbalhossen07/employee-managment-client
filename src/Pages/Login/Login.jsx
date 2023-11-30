@@ -3,11 +3,8 @@
 import { useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import swal from "sweetalert";
-
-
-// import SocialIcons from "../SocialICons/SocialICons";
 
 
 

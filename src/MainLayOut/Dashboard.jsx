@@ -25,6 +25,9 @@ const Dashboard = () => {
                 <li>
                         <NavLink to="/dashboard/employeeList">Employee List</NavLink>
                     </li>    
+                <li>
+                        <NavLink to="/dashboard/HrPayment">Payment History</NavLink>
+                    </li>    
                 </>
                 :
                
@@ -56,9 +59,9 @@ const Dashboard = () => {
                         User Home
                        </div>
                        <div className="divider"></div> 
-                        <li>
+                        {/* <li>
                         <NavLink to="/dashboard/paymentHistory"> Payment History</NavLink>
-                    </li>
+                    </li> */}
                         <li>
                         <NavLink to="/dashboard/worksheet"> WorkSheet</NavLink>
                     </li>

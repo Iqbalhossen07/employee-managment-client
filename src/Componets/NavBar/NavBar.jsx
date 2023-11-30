@@ -26,8 +26,14 @@ const pages = ['Registration', 'Contact', 'Blog' , 'Dashboard'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
+  const {user,logOut } = React.useContext(AuthContext)
+  const [users,refetch] = useEmployees()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const {user} = useContext(AuthContext);
+  React.useEffect(()=>{
+    handleCloseUserMenu()
+  },[user])
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -45,8 +51,7 @@ function NavBar() {
   };
 
 
-  const {user,logOut } = React.useContext(AuthContext)
-  const [users,refetch] = useEmployees()
+  
   const filterImage = users?.find(image=> image?.email == user?.email)
   // console.log(filterImage?.image)
   const isUserAuthenticated = !!user;
