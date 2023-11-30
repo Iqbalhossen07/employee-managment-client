@@ -22,7 +22,17 @@ const Testimonials = () => {
     return (
         <>
       
-        <Swiper 
+       <section className='mt-20'>
+
+       <div>
+          <h2 className="text-4xl text-center text-[#1976D2] font-semibold">Our Clients Says</h2>
+          <div className="divider w-24 text-red-500 mx-auto"></div>
+
+
+  
+  
+        </div>
+       <Swiper 
           style={{
             '--swiper-navigation-color': '#fff',
             '--swiper-pagination-color': '#fff',
@@ -131,6 +141,7 @@ staff were great and food in the buffet was amazing
 
 
         </Swiper>
+       </section>
       </>
     );
 };

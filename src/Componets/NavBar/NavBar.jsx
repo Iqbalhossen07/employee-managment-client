@@ -20,6 +20,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import auth from '../../Firebase/Firebase.config';
 import swal from 'sweetalert';
 import { toast } from 'react-toastify';
+import useEmployees from '../../hooks/useEmployees';
 
 const pages = ['Registration', 'Pricing', 'Blog' , 'Dashboard'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -45,7 +46,11 @@ function NavBar() {
 
 
   const {user,logOut } = React.useContext(AuthContext)
+  const [users,refetch] = useEmployees()
+  const filterImage = users?.find(image=> image?.email == user?.email)
+  // console.log(filterImage?.image)
   const isUserAuthenticated = !!user;
+  // console.log(user?.image)
   
  
 
@@ -171,7 +176,7 @@ function NavBar() {
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                    <Avatar alt="Remy Sharp" src={filterImage?.image} />
                   </IconButton>
                 </Tooltip>
                 <Menu

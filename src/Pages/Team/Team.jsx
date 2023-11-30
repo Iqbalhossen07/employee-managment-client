@@ -15,7 +15,8 @@ const Team = () => {
     return (
        <section className='mt-20 '>
         <div>
-          <h2 className="text-4xl text-center mb-10 font-semibold">Our Team</h2>
+          <h2 className="text-4xl text-center text-[#1976D2]  font-semibold">Our Team</h2>
+          <div className="divider w-24 text-[#1976D2] mx-auto"></div>
         </div>
           <Swiper
         slidesPerView={3}

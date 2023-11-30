@@ -34,8 +34,10 @@ const Login = () => {
         .then(result=>{
           const filterData = users?.find(employeeList=> employeeList.email === result?.user?.email)
           if(filterData?.fire === "fire") {
-            console.log(filterData?.email)
+            // console.log(filterData?.email)
+            logOut()  
             return swal("Warning!", "It is all ready fired.", "warning");
+            
             
         }else{
           swal("Good job!", "Login Successfully!", "success");
