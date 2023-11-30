@@ -10,6 +10,8 @@ import HrPrivate from "../PrivateRoute/HrPrivate";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 import Cart from "../Pages/Cart/Cart";
 import Payment from "../Pages/Dashboard/EmployeeList/Payment";
+import PaymentHistory from "../Pages/PaymentHistory/PaymentHistory";
+import EmployeesDetails from "../Pages/EmployeesDetails/EmployeesDetails";
 
 const router = createBrowserRouter([
     {
@@ -34,10 +36,16 @@ const router = createBrowserRouter([
         path: "dashboard",
         element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children:[
+            // hr routes
             {
                 path: "EmployeeList",
                 element: <HrPrivate><EmployeeList></EmployeeList></HrPrivate>,
                
+            },
+            {
+                path: "employeesDetails/:id",
+                element: <EmployeesDetails></EmployeesDetails>,
+                loader: ({params})=>fetch(`http://localhost:5000/payment/${params.id}`)
             },
             // admin routes
             {
@@ -45,12 +53,19 @@ const router = createBrowserRouter([
                 element: <AdminHome></AdminHome>
             },
             {
-                path: "payment",
-                element: <Payment></Payment>
+                path: "payment/:id",
+                element: <Payment></Payment>,
+                loader: ({params})=>fetch(`http://localhost:5000/payments/${params.id}`)
+                
+
             },
             {
                 path: "cart",
                 element: <Cart></Cart>
+            },
+            {
+                path: "paymentHistory",
+                element: <PaymentHistory></PaymentHistory>
             }
         ]
     }

@@ -4,14 +4,21 @@ import { useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import swal from "sweetalert";
+import useEmployees from "../../hooks/useEmployees";
 // import SocialIcons from "../SocialICons/SocialICons";
 
 
 
 const Login = () => {
+  const {signUser,logOut,user} = useContext(AuthContext)
+  const [users,refetch] = useEmployees()
+    
+    
+    
   const location = useLocation()
   const navigate = useNavigate()
-    const {signUser} = useContext(AuthContext)
+    
 
     const handleLoginPage = e=>{
         e.preventDefault()
@@ -19,19 +26,34 @@ const Login = () => {
         const password = e.target.password.value;
         console.log(email,password)
 
-        
+       
+  
         
         signUser(email,password)
        
         .then(result=>{
-          toast.success("Login Successfully!")
+          const filterData = users?.find(employeeList=> employeeList.email === result?.user?.email)
+          if(filterData?.fire === "fire") {
+            console.log(filterData?.email)
+            return swal("Warning!", "It is all ready fired.", "warning");
+            
+        }else{
+          swal("Good job!", "Login Successfully!", "success");
           navigate(location?.state ? location.state : '/')
+          
+        }
+         
         })
         .catch(error=>{
-          toast.error("Email Or Password do not match")
+          swal("Oopps!", "Email Or Password do not match!", "error");
+
                 
                 
         })
+
+       
+
+       
       
 
         

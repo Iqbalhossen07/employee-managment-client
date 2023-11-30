@@ -7,8 +7,8 @@ const Dashboard = () => {
     const [isAdmin] = useAdmin()
     return (
         <div className="flex">
-            <div className="w-64 min-h-full bg-orange-400 ">
-            <ul className="menu text-gray-600 font-medium ">
+            <div className="w-64 min-h-full  bg-[#1976D2] ">
+            <ul className="menu text-white font-medium ">
                   
                     
 
@@ -17,16 +17,7 @@ const Dashboard = () => {
                 <>
                 <li>
                         <NavLink to="/dashboard/employeeList">Employee List</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/addItems">  Add Employee</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/manageItems">  Manage Employee</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/payment">Payment</NavLink>
-                    </li>
+                    </li>    
                 </>
                 :
                
@@ -44,7 +35,7 @@ const Dashboard = () => {
                        
                    
                     <li>
-                        <NavLink to="/dashboard/manageBookings">  Manage Bookings</NavLink>
+                        <NavLink to=""> Manage Bookings</NavLink>
                     </li>
                    
                    
@@ -63,6 +54,9 @@ const Dashboard = () => {
                     <li>
                         <NavLink to="/dashboard/cart">  Cart</NavLink>
                         </li>
+                        <li>
+                        <NavLink to="/dashboard/paymentHistory"> Payment History</NavLink>
+                    </li>
                       
                    
                    

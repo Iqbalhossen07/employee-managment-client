@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import { updateProfile } from "firebase/auth";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import swal from "sweetalert";
@@ -13,9 +12,9 @@ const image_hosting_api= (`https://api.imgbb.com/1/upload?key=${image_hosting_ke
 
 
 const Register = () => {
-    const [users,refetch] = useEmployees()
-    const filterData = users.find(employeeList=> employeeList.fire === 'fire')
-    console.log(typeof(filterData.salary))
+    // const [users,refetch] = useEmployees()
+    // const filterData = users?.find(employeeList=> employeeList.fire === 'fire')
+    // console.log(filterData?.fire)
 
     const [verified,setVerified] = useState('False')
     const [fire,setFire] = useState('NotFire')
@@ -47,9 +46,9 @@ const Register = () => {
             fire:fire
             
         }
-        if(filterData?.fire === "fire"){
-            return alert('it is all ready fired')
-        }
+        // if(filterData?.fire === "fire"){
+        //     return alert('it is all ready fired')
+        // }
         console.log(menuItem)
         if (!/(?=.*[A-Z])(?=.*[!@#$%^&*()_+]).{6,}/.test(data.password)) {
             // return alert("Password must have at least one uppercase letter, one special character, and a minimum length of 6 characters.")

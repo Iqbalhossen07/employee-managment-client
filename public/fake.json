@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "picture": "https://i.ibb.co/VqKkZKW/image.png",
+      "title": "Custom Software Development",
+      "subtitle": "Building tailor-made software solutions to meet the specific needs of clients."
+    },
+    {
+      "id": 2,
+      "picture": "https://i.ibb.co/fdPht9X/image.png",
+      "title": "Web Development",
+      "subtitle": "Designing and developing websites or web applications using various technologies."
+    },
+    {
+      "id": 3,
+      "picture": "https://i.ibb.co/bNgKR8t/image.png",
+      "title": "Mobile App Development",
+      "subtitle": "Creating applications for mobile platforms such as iOS and Android."
+    }
+  ]
+  

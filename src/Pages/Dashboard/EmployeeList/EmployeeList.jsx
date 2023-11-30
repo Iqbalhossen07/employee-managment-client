@@ -1,14 +1,11 @@
-import { useEffect, useState } from "react";
-import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import {  useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import swal from "sweetalert";
-import { useQuery } from "@tanstack/react-query";
-import { toast } from "react-toastify";
 import { ImCross } from "react-icons/im";
 import { FaCheckCircle } from "react-icons/fa";
-import { loadStripe } from "@stripe/stripe-js";
 import useEmployees from "../../../hooks/useEmployees";
-const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
+
 
 
 
@@ -18,6 +15,9 @@ const EmployeeList = () => {
   const [year, setYear] = useState('');
   const [salary,setSalary] = useState('')
   const [email,setEmail] = useState('')
+  const [name,setName] = useState('')
+  const [image,setImage] = useState('')
+  const [designation,setDesignation] = useState('')
 
 
     const axiosSecure = useAxiosSecure()
@@ -33,14 +33,18 @@ const EmployeeList = () => {
     // })
     
 const filterData = users.filter(employeeList=> employeeList.role === "employee")
+// console.log(filterData)
 
 
 
 
 
-const handlePay = (salary,email) => {
+const handlePay = (salary,email,name,image,designation) => {
   setSalary(salary)
   setEmail(email)
+  setName(name)
+  setImage(image)
+  setDesignation(designation)
   document.getElementById('my_modal_5').showModal()
 };
 
@@ -52,15 +56,17 @@ const handlePayButton = async (e)=>{
   const form = e.target
   const month = form.month.value;
   const year = form.year.value;
-  console.log(salary,email,month,year)
-  const employeeItem = {salary,email,month,year}
+  console.log(salary,email,month,year,name,image,designation)
+  const employeeItem = {salary,email,month,year,name,image,designation}
+  // navigate('/dashboard/payment')
+  // return <Navigate to={'/dashboard/payment'} state={employeeItem}></Navigate>
 
 
   const menuRes = await axiosSecure.post('/payments',employeeItem)
   if(menuRes.data.insertedId){
     //   toast.success("Added Successfully")
     //   swal("Good job!", "Create Successfully!", "success");
-    navigate('/dashboard/payment')
+    navigate(`/dashboard/payment/${menuRes.data.insertedId}`)
       console.log(menuRes.data)
   }
 
@@ -111,19 +117,19 @@ const handlePayButton = async (e)=>{
           </thead>
           <tbody>
             {filterData && filterData.map((employee) => (
-              <tr key={employee._id}>
-                <td >{employee.name}</td>
-                <td >{employee.email}</td>
+              <tr key={employee?._id}>
+                <td >{employee?.name}</td>
+                <td >{employee?.email}</td>
                 {/* <td>{employee.verified}</td> */}
-                {employee.verified === 'False' ? <td><button onClick={()=>handleMakeverified(employee)} className="btn "><ImCross className="text-red-600"></ImCross></button> </td> : <td><button  className="btn"><FaCheckCircle className="text-green-500"></FaCheckCircle></button></td>}
-                <td>{employee.bankAccount}</td>
-                <td>${employee.salary}</td>
+                {employee?.verified === 'False' ? <td><button onClick={()=>handleMakeverified(employee)} className="btn "><ImCross className="text-red-600"></ImCross></button> </td> : <td><button  className="btn"><FaCheckCircle className="text-green-500"></FaCheckCircle></button></td>}
+                <td>{employee?.bankAccount}</td>
+                <td>${employee?.salary}</td>
                
                 
                 
                   <td> {/* Open the modal using document.getElementById('ID').showModal() method */}
-                  {employee.verified === 'False' ? <button disabled className="btn">Pay</button> : 
-                  <button className="btn" onClick={()=>handlePay(employee.salary,employee.email)}>Pay</button>
+                  {employee?.verified === 'False' ? <button disabled className="btn">Pay</button> : 
+                  <button className="btn" onClick={()=>handlePay(employee?.salary,employee?.email,employee?.name,employee?.image,employee?.designation)}>Pay</button>
                    }
 
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
@@ -140,6 +146,48 @@ const handlePayButton = async (e)=>{
                 name="salary"
                 type="text"
                 placeholder="Salary"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input readOnly
+                value={name}
+                // Use a template string to set a unique default value for each employee
+                name="name"
+                type="text"
+                placeholder="Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Image</span>
+              </label>
+              <input readOnly
+                value={image}
+                // Use a template string to set a unique default value for each employee
+                name="image"
+                type="text"
+                placeholder="Image"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Designation</span>
+              </label>
+              <input readOnly
+                value={designation}
+                // Use a template string to set a unique default value for each employee
+                name="image"
+                type="text"
+                placeholder="Image"
                 className="input input-bordered"
                 required
               />
@@ -215,7 +263,7 @@ const handlePayButton = async (e)=>{
                   
                 
 
-                <td>  <Link to=''>
+                <td>  <Link to={`/dashboard/employeesDetails/${employee._id}`}>
                   <td> <button className="btn">Details</button></td>
                 </Link></td>
                 

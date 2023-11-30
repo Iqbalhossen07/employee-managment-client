@@ -3,7 +3,7 @@ import NavBar from "../Componets/NavBar/NavBar";
 
 const MainLaOut = () => {
     return (
-        <div>
+        <div style={{ overflowX: 'hidden', overflowY: 'hidden' }}>
             <NavBar></NavBar>
             <Outlet></Outlet>
         </div>
