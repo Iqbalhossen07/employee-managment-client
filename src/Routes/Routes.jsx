@@ -12,6 +12,8 @@ import Cart from "../Pages/Cart/Cart";
 import Payment from "../Pages/Dashboard/EmployeeList/Payment";
 import PaymentHistory from "../Pages/PaymentHistory/PaymentHistory";
 import EmployeesDetails from "../Pages/EmployeesDetails/EmployeesDetails";
+import WorkSheet from "../Pages/WorkSheet/WorkSheet";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>,
+            },
+            {
+                path: "/contact",
+                element: <Contact></Contact>
             }
         ]
     },
@@ -66,7 +72,12 @@ const router = createBrowserRouter([
             {
                 path: "paymentHistory",
                 element: <PaymentHistory></PaymentHistory>
-            }
+            },
+            {
+                path: "worksheet",
+                element: <WorkSheet></WorkSheet>
+            },
+           
         ]
     }
 ])

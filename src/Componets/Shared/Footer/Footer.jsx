@@ -44,9 +44,8 @@ const Footer = () => {
 <footer className="footer  footer-center p-10 bg-neutral text-neutral-content rounded">
 <nav className="grid grid-flow-col gap-4">
 <NavLink to="/"><li className="list-none">Home</li></NavLink>
-<NavLink to="/about"><li className="list-none">About Us</li></NavLink>
-<NavLink to="/rooms">Rooms<li className="list-none"></li></NavLink>
-<NavLink to="/myBookings"><li className="list-none">My Bookings</li></NavLink>
+<NavLink to="/register"><li className="list-none">Register</li></NavLink>
+<NavLink to="/dashboard"><li className="list-none">DashBoard</li></NavLink>
 <NavLink to="/contact"><li className="list-none">Contact</li></NavLink>
 </nav> 
 <nav>

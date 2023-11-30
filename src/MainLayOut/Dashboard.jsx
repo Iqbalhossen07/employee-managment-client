@@ -1,10 +1,13 @@
 import {  NavLink, Outlet } from "react-router-dom";
 import useHr from "../hooks/useHr";
 import useAdmin from "../hooks/useAdmin";
+import useEmployee from "../hooks/useEmployee"
+
 
 const Dashboard = () => {
     const [isHr] = useHr();
     const [isAdmin] = useAdmin()
+    const [isEmployee] = useEmployee()
     return (
         <div className="flex">
             <div className="w-64 min-h-full  bg-[#1976D2] ">
@@ -15,6 +18,10 @@ const Dashboard = () => {
             {
                 isHr ? 
                 <>
+                <div className="text-center text-xl">
+                        HR Home
+                       </div>
+                       <div className="divider"></div> 
                 <li>
                         <NavLink to="/dashboard/employeeList">Employee List</NavLink>
                     </li>    
@@ -29,17 +36,32 @@ const Dashboard = () => {
             {
                 isAdmin ? 
                 <>
+                <div className="text-center text-xl">
+                        Admin Home
+                       </div>
+                       <div className="divider"></div> 
                     <li>
                         <NavLink to="/dashboard/adminHome">Admin Home</NavLink>
-                        </li>
+                        </li> 
+                </>
+                :
+                <>
+                </>
+            }
+            {
+                isEmployee ? 
+                <>
                        
-                   
-                    <li>
-                        <NavLink to=""> Manage Bookings</NavLink>
+                       <div className="text-center text-xl">
+                        User Home
+                       </div>
+                       <div className="divider"></div> 
+                        <li>
+                        <NavLink to="/dashboard/paymentHistory"> Payment History</NavLink>
                     </li>
-                   
-                   
-                     
+                        <li>
+                        <NavLink to="/dashboard/worksheet"> WorkSheet</NavLink>
+                    </li>
                 </>
                 :
                 <>
@@ -51,12 +73,8 @@ const Dashboard = () => {
                     <li>
                         <NavLink to="/">  Home</NavLink>
                         </li>
-                    <li>
-                        <NavLink to="/dashboard/cart">  Cart</NavLink>
-                        </li>
-                        <li>
-                        <NavLink to="/dashboard/paymentHistory"> Payment History</NavLink>
-                    </li>
+                   
+                    
                       
                    
                    

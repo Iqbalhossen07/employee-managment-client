@@ -113,7 +113,7 @@ const Register = () => {
           <label className="label">
               <span className="label-text"> User Name</span>
           </label>
-          <input {...register("name",{required:true})} type="text"  placeholder="Enter the recipe name" name="name" className="input input-bordered w-full" />
+          <input {...register("name",{required:true})} type="text"  placeholder="Enter the user name" name="name" className="input input-bordered w-full" />
           </div>
       </div>
              <div className="flex flex-col md:flex-row gap-6 ">
@@ -122,7 +122,7 @@ const Register = () => {
           <label className="label">
               <span className="label-text"> Email</span>
           </label>
-          <input {...register("email",{required:true})} type="email"  placeholder="Enter the recipe name" name="email" className="input input-bordered w-full" />
+          <input {...register("email",{required:true})} type="email"  placeholder="Enter the Email name" name="email" className="input input-bordered w-full" />
           </div>
       </div>
              <div className="flex flex-col md:flex-row gap-6 ">
@@ -131,7 +131,7 @@ const Register = () => {
           <label className="label">
               <span className="label-text"> Password</span>
           </label>
-          <input {...register("password",{required:true})} type="password"  placeholder="Enter the recipe name" name="password" className="input input-bordered w-full" />
+          <input {...register("password",{required:true})} type="password"  placeholder="Enter the Password " name="password" className="input input-bordered w-full" />
           </div>
       </div>
 
@@ -164,7 +164,7 @@ const Register = () => {
           <label className="label">
               <span className="label-text"> Bank Account</span>
           </label>
-          <input {...register("bankAccount",{required:true})} type="text"  placeholder="Enter the recipe name" name="bankAccount" className="input input-bordered w-full" />
+          <input {...register("bankAccount",{required:true})} type="text"  placeholder="Enter the Bank Account" name="bankAccount" className="input input-bordered w-full" />
           </div>
       </div>
         <div className="flex flex-col md:flex-row gap-6 ">
@@ -173,7 +173,7 @@ const Register = () => {
           <label className="label">
               <span className="label-text"> Salary</span>
           </label>
-          <input {...register("salary",{required:true})} type="text"  placeholder="Enter the recipe name" name="salary" className="input input-bordered w-full" />
+          <input {...register("salary",{required:true})} type="text"  placeholder="Enter the Salary" name="salary" className="input input-bordered w-full" />
           </div>
       </div>
         <div className="flex flex-col md:flex-row gap-6 ">
@@ -182,18 +182,10 @@ const Register = () => {
           <label className="label">
               <span className="label-text"> Designation</span>
           </label>
-          <input {...register("designation",{required:true})} type="text"  placeholder="Enter the recipe name" name="designation" className="input input-bordered w-full" />
+          <input {...register("designation",{required:true})} type="text"  placeholder="Enter the Designation" name="designation" className="input input-bordered w-full" />
           </div>
       </div>
-        {/* <div className="flex flex-col md:flex-row gap-6 ">
-         
-         <div className="form-control w-full disabled">
-          <label className="label">
-              <span className="label-text"> Verified</span>
-          </label>
-          <input {...register("verified",{required:true})} defaultValue={verified} type="text"  placeholder="Enter the recipe name" name="designation" className="input input-bordered w-full" />
-          </div>
-      </div> */}
+        
      
 
       

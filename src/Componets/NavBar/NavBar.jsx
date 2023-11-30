@@ -22,7 +22,7 @@ import swal from 'sweetalert';
 import { toast } from 'react-toastify';
 import useEmployees from '../../hooks/useEmployees';
 
-const pages = ['Registration', 'Pricing', 'Blog' , 'Dashboard'];
+const pages = ['Registration', 'Contact', 'Blog' , 'Dashboard'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
@@ -85,7 +85,7 @@ function NavBar() {
               </Button>
             ))}
           </Box> */}
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -101,7 +101,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-          {user &&  <img src={user.image} alt="" />}
+          <img src='https://i.ibb.co/JrL4DcW/image.png' alt="" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -157,7 +157,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            {user &&  <img src={user.image} alt="" />}
+            <img src='https://i.ibb.co/JrL4DcW/image.png' alt="" />
           </Typography>
          
 
@@ -165,8 +165,9 @@ function NavBar() {
             
          <div>
          <Link to="/">  <button >Home</button></Link>
-          <Link to="/register">  <button >Registration</button></Link>
+          <Link to="/register">  <button >Register</button></Link>
           <Link to="/dashboard">  <button >Dashboard</button></Link>
+          <Link to="/contact">  <button >Contact</button></Link>
          </div>
           </Box>
 

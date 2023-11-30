@@ -1,0 +1,31 @@
+.horizontal-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .horizontal-form label {
+    min-width: 80px; /* Adjust the width as needed */
+  }
+  
+  .horizontal-form input,
+  .horizontal-form select,
+  .horizontal-form button {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .horizontal-form button {
+    margin-top: 20px; /* Adjust the margin as needed */
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .horizontal-form button:hover {
+    background-color: #45a049;
+  }
+  

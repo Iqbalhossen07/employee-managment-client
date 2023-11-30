@@ -6,7 +6,6 @@ import { useQuery } from "@tanstack/react-query";
 
 const PaymentHistory = () => {
     const {user} = useContext(AuthContext)
-
     const axiosSecure = useAxiosSecure();
 
     const { data: payment = [] } = useQuery({
