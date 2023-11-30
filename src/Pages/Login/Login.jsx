@@ -5,6 +5,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet";
 
 
 
@@ -45,10 +46,15 @@ const Login = () => {
     }
     return (
         <section>
+            <Helmet>
+                <title>
+                Soft Impact || Login
+                </title>
+            </Helmet>
         <div className="hero md:mt-10 lg:20 ">
           <div className="hero-content flex-col ">
             <div className="text-center">
-              <h1 className="text-5xl font-bold text-[#26917C]">Login now!</h1>
+              <h1 className="text-5xl font-bold text-[#1976D2]">Login now!</h1>
             </div>
             <div className="card flex-shrink-0 w-full max-w-xl ">
               <form onSubmit={handleLoginPage} className="w-80 md:w-96">
@@ -65,7 +71,7 @@ const Login = () => {
                   <input name="password" type="Password" placeholder="Password" className="input input-bordered" required />
                 </div>
                 <div className="form-control mt-6 mb-3">
-                  <button className="btn bg-[#26917C] hover:bg-[#26917C] text-white">Login</button>
+                  <button className="btn bg-[#1976D2] hover:bg-[#1976D2] text-white">Login</button>
                 </div>
               </form>
               <ToastContainer />
@@ -75,7 +81,7 @@ const Login = () => {
               Don't have an account?
               <button
                 href=""
-                className="ml-1 block font-sans text-sm font-bold leading-normal text-[#26917C] antialiased"
+                className="ml-1 block font-sans text-sm font-bold leading-normal text-[#1976D2] antialiased"
               >
                 Register
               </button>

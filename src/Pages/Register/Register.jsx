@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import swal from "sweetalert";
 import useEmployees from "../../hooks/useEmployees";
+import { Helmet } from "react-helmet";
 const image_hosting_key = import.meta.env.VITE_IMGBB_HOTING_KEY;
 const image_hosting_api= (`https://api.imgbb.com/1/upload?key=${image_hosting_key}`)
 // import SocialIcons from "../SocialICons/SocialICons";
@@ -96,10 +97,15 @@ const Register = () => {
     }
     return (
         <section>
+              <Helmet>
+                <title>
+                Soft Impact || Register
+                </title>
+            </Helmet>
         <div className="hero md:mt-10 lg:20 ">
          <div className="hero-content flex-col ">
            <div className="text-center">
-             <h1 className="text-4xl font-bold text-[#26917C]">Register now!</h1>
+             <h1 className="text-4xl font-bold text-[#1976D2]">Register now!</h1>
            </div>
            <div className="card flex-shrink-0 w-full max-w-sm ">
            
@@ -195,7 +201,7 @@ const Register = () => {
        </div>
 
        <div>
-        <button className="btn btn-accent">Submit</button>
+        <button className="btn btn-accent">Register</button>
        </div>
             </form>
              <ToastContainer />
@@ -205,7 +211,7 @@ const Register = () => {
          <p className=" block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
              Already have an account?
              <button
-                 className="font-medium text-[#26917C] transition-colors hover:text-[#26917C]"
+                 className="font-medium text-[#1976D2] transition-colors hover:text-[#1976D2]"
                  href=""
              >
                  Login

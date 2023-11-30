@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet";
 
 const HrPayment = () => {
 
@@ -14,6 +15,11 @@ const HrPayment = () => {
     console.log(payment)
     return (
        <section>
+         <Helmet>
+                <title>
+                Soft Impact || Payment History
+                </title>
+            </Helmet>
           <div className="overflow-x-auto" >
         <table className="table">
           <thead>

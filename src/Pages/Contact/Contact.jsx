@@ -1,5 +1,6 @@
 import swal from "sweetalert";
 import ContactAddress from "./ContactAddress";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
 
@@ -13,7 +14,7 @@ const Contact = () => {
 
         console.log(email,address,message)
         
-        fetch('http://localhost:5000/contact',{
+        fetch('https://employee-managment-server.vercel.app/contact',{
             method: "POST",
                  headers: {
                      "Content-Type": "application/json",
@@ -34,13 +35,18 @@ const Contact = () => {
 
 
     return (
-        <section>
+        <section className="mb-10">
+             <Helmet>
+                <title>
+                Soft Impact || Contact
+                </title>
+            </Helmet>
             <div>
                 <ContactAddress></ContactAddress>
             </div>
 
              {/* first  */}
-        <h2 className="text-center text-xl md:text-3xl lg:text-4xl font-semibold text-[#54e2d2] mb-3">Please FillUp </h2>
+        <h2 className="text-center text-xl md:text-3xl lg:text-4xl font-semibold text-[#1976D2] mb-3">Please FillUp </h2>
      <form onSubmit={AddForm}>
      <div className="flex flex-col md:flex-row gap-6  ">
           <div className="form-control md:w-1/2">

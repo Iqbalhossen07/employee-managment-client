@@ -13,7 +13,7 @@ import './Team.css';
 import { Grid, Pagination } from 'swiper/modules';
 const Team = () => {
     return (
-       <section className='mt-20 '>
+       <section className='mt-20 ' data-aos = "zoom-in">
         <div>
           <h2 className="text-4xl text-center text-[#1976D2]  font-semibold">Our Team</h2>
           <div className="divider w-24 text-[#1976D2] mx-auto"></div>
@@ -38,7 +38,7 @@ const Team = () => {
         <SwiperSlide> <img src="https://i.ibb.co/G9F47V5/pexels-cottonbro-studio-6474537.jpg" alt="" /> </SwiperSlide>
         <SwiperSlide> <img src="https://i.ibb.co/8d4YMx6/pexels-tima-miroshnichenko-6170398.jpg" alt="" /> </SwiperSlide>
         <SwiperSlide> <img src="https://i.ibb.co/jDCJ7SV/pexels-cottonbro-studio-4100481.jpg" alt="" /> </SwiperSlide>
-        <SwiperSlide> <img src="https://i.ibb.co/M5Fs0ss/pexels-andrea-piacquadio-3770106.jpg" alt="" /> </SwiperSlide>
+        
       </Swiper>
        </section>
     );

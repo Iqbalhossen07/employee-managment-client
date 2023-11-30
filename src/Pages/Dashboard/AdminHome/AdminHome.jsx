@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
 import swal from "sweetalert";
 import useEmployees from "../../../hooks/useEmployees";
+import { Helmet } from "react-helmet";
 
 
 const AdminHome = () => {
@@ -51,6 +52,11 @@ const handleMakeFire = user =>{
   }
     return (
         <section>
+           <Helmet>
+                <title>
+                Soft Impact || Admin Home
+                </title>
+            </Helmet>
         <div className="overflow-x-auto" >
         <table className="table">
           <thead>

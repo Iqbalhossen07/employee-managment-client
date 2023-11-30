@@ -8,7 +8,7 @@ const ServiceCard = ({data}) => {
     const {picture,title,subtitle}= data;
    
     return (
-        <section>
+        <section data-aos = "zoom-in">
           
              <Card sx={{ maxHeight: 645 }}>
       <CardActionArea>

@@ -22,8 +22,8 @@ import swal from 'sweetalert';
 import { toast } from 'react-toastify';
 import useEmployees from '../../hooks/useEmployees';
 
-const pages = ['Registration', 'Contact', 'Blog' , 'Dashboard'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Registration', 'Contact' , 'Dashboard'];
+const settings = ['Logout'];
 
 function NavBar() {
   const {user,logOut } = React.useContext(AuthContext)
@@ -145,7 +145,7 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap

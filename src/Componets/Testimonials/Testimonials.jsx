@@ -73,7 +73,7 @@ const Testimonials = () => {
   
   </div>
   <div className="text " data-swiper-parallax="-100" data-aos = "fade-up">
-  Breakfast at the hotel: One of the best that we have experieced so far.
+  The developers here do a very good job, because I am working on a software from here, so.
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>
@@ -103,7 +103,7 @@ const Testimonials = () => {
   
   </div>
   <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
-  Location is very good. Stuff was very helpful. Service was good.
+  Their work skills are very good, I was designing UI from them, it was very good.
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>
@@ -133,8 +133,7 @@ const Testimonials = () => {
   
   </div>
   <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
-  Positive section of review
-staff were great and food in the buffet was amazing
+  The efficiency of work here is very good, from here I was working on a software blockchain
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>

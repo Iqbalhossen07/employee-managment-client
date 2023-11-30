@@ -1,6 +1,17 @@
+import { useEffect } from 'react';
 import banner from '../../assets/banner4.jpg';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const Banner = () => {
+
+    useEffect(()=>{
+        Aos.init({
+          duration: 1000, 
+          easing: 'ease-in-out', 
+          offset: 100, 
+        })
+      },[])
     return (
         <div className="hero h-72 md:h-96 lg:h-[570px] relative">
             <img className='h-full md:h-96 lg:h-[570px] w-full object-cover' src={banner} alt="" />
@@ -11,9 +22,9 @@ const Banner = () => {
                         <img className='w-12 ' alt="" />
                         
                     </div> */}
-                    <p className='italic md:[400px] mb-5 text-2xl' >Empowering Success Through Innovation</p>
+                    <p className='italic md:[400px] mb-5 text-2xl' data-aos = "fade-right">Empowering Success Through Innovation</p>
                     <h1 className="mb-5  text-2xl md:text-3xl lg:text-6xl font-medium" data-aos="fade-left">Transforming Ideas  into <br />Impactful Solutions</h1>
-                    <p className='hidden md:block  italic mb-5' >At Employee Management, we pioneer cutting-edge software solutions that redefine industries <br /> and drive success. With a proven track record of excellence, we have been at the forefront of <br />innovation, delivering tailored software that empowers businesses to thrive in the digital era. </p>
+                    <p className='hidden md:block  italic mb-5' data-aos = "zoom-in">At Employee Management, we pioneer cutting-edge software solutions that redefine industries <br /> and drive success. With a proven track record of excellence, we have been at the forefront of <br />innovation, delivering tailored software that empowers businesses to thrive in the digital era. </p>
                 </div>
             </div>
         </div>

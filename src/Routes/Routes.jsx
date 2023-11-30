@@ -56,7 +56,7 @@ const router = createBrowserRouter([
             {
                 path: "employeesDetails/:id",
                 element: <EmployeesDetails></EmployeesDetails>,
-                loader: ({params})=>fetch(`http://localhost:5000/payment/${params.id}`)
+                loader: ({params})=>fetch(`https://employee-managment-server.vercel.app/payment/${params.id}`)
             },
             // admin routes
             {
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
             {
                 path: "payment/:id",
                 element: <Payment></Payment>,
-                loader: ({params})=>fetch(`http://localhost:5000/payments/${params.id}`)
+                loader: ({params})=>fetch(`https://employee-managment-server.vercel.app/payments/${params.id}`)
                 
 
             },

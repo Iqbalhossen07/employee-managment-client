@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -49,6 +50,11 @@ const WorkSheet = () => {
 
   return (
     <section>
+       <Helmet>
+                <title>
+                Soft Impact || WorkSheet
+                </title>
+            </Helmet>
       <div className=" ">
         <div className="flex-col ">
           <div className="card flex-shrink-0 w-full ">

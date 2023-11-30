@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 
 const EmployeesDetails = () => {
@@ -5,6 +6,11 @@ const EmployeesDetails = () => {
     // console.log(loaderData)
     return (
         <section>
+           <Helmet>
+                <title>
+                Soft Impact || EmployeesDetails
+                </title>
+            </Helmet>
             <div className="overflow-x-auto" data-aos="zoom-in">
         <table className="table">
           <thead>

@@ -2,6 +2,7 @@ import {  NavLink, Outlet } from "react-router-dom";
 import useHr from "../hooks/useHr";
 import useAdmin from "../hooks/useAdmin";
 import useEmployee from "../hooks/useEmployee"
+import { Helmet } from "react-helmet";
 
 
 const Dashboard = () => {
@@ -9,6 +10,12 @@ const Dashboard = () => {
     const [isAdmin] = useAdmin()
     const [isEmployee] = useEmployee()
     return (
+       <section>
+         <Helmet>
+        <title>
+        Soft Impact || Dashboard
+        </title>
+    </Helmet>
         <div className="flex">
             <div className="w-64 min-h-full  bg-[#1976D2] ">
             <ul className="menu text-white font-medium ">
@@ -94,6 +101,7 @@ const Dashboard = () => {
                 <Outlet></Outlet>
             </div>
         </div>
+       </section>
     );
 };
 

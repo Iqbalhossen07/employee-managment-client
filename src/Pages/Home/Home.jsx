@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Testimonials from "../../Componets/Testimonials/Testimonials";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
@@ -8,6 +9,11 @@ import Team from "../Team/Team";
 const Home = () => {
     return (
        <section className="mb-20">
+         <Helmet>
+                <title>
+                Soft Impact || Home
+                </title>
+            </Helmet>
          <div>
           <Banner></Banner>
         </div>

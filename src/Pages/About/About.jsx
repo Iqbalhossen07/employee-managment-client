@@ -1,14 +1,11 @@
 
-import { Link } from "react-router-dom";
-
-
-
 const About = () => {
 
  
     return (
       
         <section>
+           
        
 
 <div className="hero min-h-screen ">

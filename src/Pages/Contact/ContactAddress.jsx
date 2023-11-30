@@ -9,8 +9,8 @@ const ContactAddress = () => {
 
     
     return (
-       <section>
-        <h2 className="text-center mt-10 text-base md:text-3xl lg:text-4xl font-semibold text-[#26917C] mb-10" data-aos = "flip-down">Contact With Us</h2>
+       <section className="">
+        <h2 className="text-center mt-10 text-base md:text-3xl lg:text-4xl font-semibold text-[#1976D2] mb-10" data-aos = "flip-down">Contact With Us</h2>
          <div  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-3 lg:gap-8 mb-10">
             <div data-aos = "fade-right" className="card  bg-[#042C3E] shadow-xl">
            

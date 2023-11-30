@@ -1,8 +1,13 @@
-# React + Vite
+<!-- site link -->
+* https://employee-managment-91f8f.web.app/
+<!-- Assignment category -->
+* assignment12_category_0004
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- My Project Features -->
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* My project is employee management. And this project has three rules, Admin, HR, Employee.
+* Admin's rule is, he can make someone redundant and any employee as HR.
+* The rule of HR is that he can make payment only if he verifies an employee.
+* Only HR can view dashboard route private and employee list. No one else can see.
+* Again, only the admin can abandon someone, and can also fire, no one else can.
