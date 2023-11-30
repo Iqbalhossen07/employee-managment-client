@@ -13,7 +13,7 @@ const Service = () => {
 
   
     return (
-       <section className=" mt-20 mb-20">
+       <section className=" ">
         <div>
           <h2 className="text-4xl text-center mb-10 font-semibold">Our Services</h2>
         </div>

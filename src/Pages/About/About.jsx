@@ -9,7 +9,7 @@ const About = () => {
     return (
       
         <section>
-      
+       
 
 <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row" data-aos = "zoom-in">
@@ -27,9 +27,9 @@ const About = () => {
 
             Dining options include a cafe and an international restaurant. Parking, Wi-Fi and airport transfers are available.
 </p>
-            <Link to='/rooms'>
-            <button className="btn btn-primary bg-[#26917C] hover:bg-[#26917C] border-none">Book Now</button>
-            </Link>
+            {/* <Link to=''>
+            <button className="btn btn-primary bg-[#26917C] hover:bg-[#26917C] border-none">Call </button>
+            </Link> */}
           </div>
         </div>
       </div>

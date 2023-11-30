@@ -13,7 +13,10 @@ import './Team.css';
 import { Grid, Pagination } from 'swiper/modules';
 const Team = () => {
     return (
-       <section>
+       <section className='mt-20 '>
+        <div>
+          <h2 className="text-4xl text-center mb-10 font-semibold">Our Team</h2>
+        </div>
           <Swiper
         slidesPerView={3}
         grid={{
