@@ -15,11 +15,13 @@ import EmployeesDetails from "../Pages/EmployeesDetails/EmployeesDetails";
 import WorkSheet from "../Pages/WorkSheet/WorkSheet";
 import Contact from "../Pages/Contact/Contact";
 import HrPayment from "../Pages/HrPayment/HrPayment";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element:<MainLaOut></MainLaOut>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:"/",
