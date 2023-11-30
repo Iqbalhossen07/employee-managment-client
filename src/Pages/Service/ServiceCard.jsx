@@ -9,11 +9,13 @@ const ServiceCard = ({data}) => {
    
     return (
         <section>
-             <Card sx={{ maxWidth: 345 }}>
+          
+             <Card sx={{ maxHeight: 645 }}>
       <CardActionArea>
         <CardMedia
+        sx={{ maxHeight: 200 }}
           component="img"
-          height="140"
+          
           image={picture}
           alt="green iguana"
         />

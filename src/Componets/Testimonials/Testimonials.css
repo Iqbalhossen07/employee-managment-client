@@ -1,8 +1,8 @@
 
 .swiper {
   width: 100%;
-  height: 600px;
-  background: #000;
+  height: 450px;
+  background: #ffffff;
 }
 
 .swiper-slide {
@@ -10,7 +10,7 @@
   color: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 60px;
+  /* padding: 40px 60px; */
 }
 
 .parallax-bg {

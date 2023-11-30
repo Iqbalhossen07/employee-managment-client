@@ -6,16 +6,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import './Banner.css';
+import './Testimonials.css';
 
-import slider1 from '../../assets/banner1.jpg'
-import slider2 from '../../assets/banner1.jpg'
-import slider3 from '../../assets/banner1.jpg'
+import slider1 from '../../assets/testimonial3.png'
+import slider2 from '../../assets/testimonial2.jpg'
+import slider3 from '../../assets/testimonial1.jpg'
 
 
 // import required modules
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
-const UserTestimonials = () => {
+const Testimonials = () => {
 
 
 
@@ -37,19 +37,19 @@ const UserTestimonials = () => {
           className="mySwiper "
         >
 
-<SwiperSlide>
+<SwiperSlide className='p-16'>
 <div
     slot="container-start"
-    className="parallax-bg"
+    className="parallax-bg "
     style={{
-      'background-image': `url(https://i.ibb.co/zhTX2Gf/pexels-pok-rie-1746589.jpg)`,
+      'background-image': `url(https://i.ibb.co/C8LGnKT/pexels-pixabay-276452.jpg)`,
     }}
     data-swiper-parallax="-23%"
   ></div>
-  <div className="title " data-swiper-parallax="-300" data-aos = "fade-down">
+  <div className="title  " data-swiper-parallax="-300" data-aos = "fade-down">
   Sajid Ahmed
   </div>
-  <div className="subtitle" data-swiper-parallax="-200">
+  <div className="subtitle " data-swiper-parallax="-200">
   <div className="avatar">
   <div className="w-24 rounded-full "
    style={{
@@ -62,17 +62,17 @@ const UserTestimonials = () => {
 </div>
   
   </div>
-  <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
+  <div className="text " data-swiper-parallax="-100" data-aos = "fade-up">
   Breakfast at the hotel: One of the best that we have experieced so far.
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>
-<SwiperSlide>
+<SwiperSlide className='p-16'>
   <div
     slot="container-start"
     className="parallax-bg"
     style={{
-      'background-image': `url(https://i.ibb.co/LYQ4jf6/pexels-adriaan-greyling-751268.jpg)`,
+      'background-image': `url(https://i.ibb.co/gR3HVCs/pexels-jorge-jesus-614117.jpg)`,
     }}
     data-swiper-parallax="-23%"
   ></div>
@@ -97,12 +97,12 @@ const UserTestimonials = () => {
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>
-<SwiperSlide>
+<SwiperSlide className='p-16'>
   <div
     slot="container-start"
     className="parallax-bg"
     style={{
-      'background-image': `url(https://i.ibb.co/hmfPB3k/pexels-oliver-sj-str-m-1078981.jpg)`,
+      'background-image': `url(https://i.ibb.co/fqL9dL7/pexels-pixabay-248515.jpg)`,
     }}
     data-swiper-parallax="-23%"
   ></div>
@@ -135,4 +135,4 @@ staff were great and food in the buffet was amazing
     );
 };
 
-export default UserTestimonials;
+export default Testimonials;

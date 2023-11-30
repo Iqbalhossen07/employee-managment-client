@@ -1,13 +1,13 @@
 [
     {
       "id": 1,
-      "picture": "https://i.ibb.co/VqKkZKW/image.png",
+      "picture": "https://i.ibb.co/fdPht9X/image.png",
       "title": "Custom Software Development",
       "subtitle": "Building tailor-made software solutions to meet the specific needs of clients."
     },
     {
       "id": 2,
-      "picture": "https://i.ibb.co/fdPht9X/image.png",
+      "picture": "https://i.ibb.co/VqKkZKW/image.png",
       "title": "Web Development",
       "subtitle": "Designing and developing websites or web applications using various technologies."
     },
@@ -16,6 +16,24 @@
       "picture": "https://i.ibb.co/bNgKR8t/image.png",
       "title": "Mobile App Development",
       "subtitle": "Creating applications for mobile platforms such as iOS and Android."
+    },
+    {
+      "id": 4,
+      "picture": "https://i.ibb.co/12ZRtjk/image.png",
+      "title": "UI/UX Design",
+      "subtitle": "Designing user interfaces and experiences for software  to enhance  and user satisfaction."
+    },
+    {
+      "id": 5,
+      "picture": "https://i.ibb.co/2yKp8F6/image.png",
+      "title": "E-commerce Solutions",
+      "subtitle": "Developing online shopping platforms, payment gateways, and other e-commerce-related solutions."
+    },
+    {
+      "id": 6,
+      "picture": "https://i.ibb.co/TRgJ5dN/image.png",
+      "title": "Blockchain Development",
+      "subtitle": "Developing decentralized applications integrating blockchain technology into existing systems."
     }
   ]
   

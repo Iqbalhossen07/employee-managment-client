@@ -3,7 +3,7 @@ import banner from '../../assets/banner4.jpg';
 const Banner = () => {
     return (
         <div className="hero h-72 md:h-96 lg:h-[570px] relative">
-            <img className='h-full md:h-[570px] w-full object-cover' src={banner} alt="" />
+            <img className='h-full md:h-96 lg:h-[570px] w-full object-cover' src={banner} alt="" />
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-start p-6 text-neutral-content">
                 <div>
